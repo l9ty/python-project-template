@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "python-project-template"
+version = "0.1.0"
+description = "Python project template"
+authors = ["gosu <litongyi1999@163.com>"]
+package-mode = false
+
+# exclude = []
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
