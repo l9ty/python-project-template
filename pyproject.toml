@@ -3,6 +3,7 @@ name = "python-project-template"
 version = "0.1.0"
 description = "Python project template"
 authors = ["gosu <litongyi1999@163.com>"]
+packages = [{include = "app", from = "src"}]
 package-mode = false
 
 # exclude = []
@@ -17,6 +18,12 @@ python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.2.0"
+
+[tool.pytest]
+import-mode = "importlib"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
 
 [build-system]
 requires = ["poetry-core"]
